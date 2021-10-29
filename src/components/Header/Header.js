@@ -1,11 +1,14 @@
 import React from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import useAuth from '../../hooks/useAuth';
 
-import './Header.css'
+import './Header.css';
+
 
 const Header = () => {
+    const { user, logout } = useAuth()
 
     return (
 
@@ -23,7 +26,7 @@ const Header = () => {
                             <Nav.Link as={HashLink} to="/addNewService">Add New Service</Nav.Link>
 
 
-                            {/* {
+                            {
                                 user?.email ?
                                     <Button onClick={logout} >Logout</Button>
                                     :
@@ -34,11 +37,11 @@ const Header = () => {
                             }
                             {
                                 user?.email &&
-                              
-                                    <span style={{ color: "white" }}> {user?.displayName} </span>
 
-                               
-                            } */}
+                                <span style={{ color: "white" }}> {user?.displayName} </span>
+
+
+                            }
 
 
 

@@ -1,0 +1,50 @@
+.login-form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.card{
+    background-color:rgb(242, 239, 243);
+    border-color:darkgray;
+}
+.btnStyle{
+    background-color: rgb(191, 25, 224);
+    border-radius: 3px;
+    color: black;
+    font-weight: bold;
+    border-color: blueviolet;
+    font-size: 23;
+  
+   
+
+}
+.createStyle{
+    color: black;
+    font-weight: bold;
+    
+}
+
+.title1{
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+}
+.convert{
+    font-size: 13px;
+}
+.formStyle{
+  
+    margin-right: 10%;
+ }
+ .btnStyle{
+     width: 50%;
+     font-weight: 300;
+   
+ }
+ .btn12{
+     margin: 0px;
+ }
+ .btnStyle1{
+     width: 75%;
+ }
