@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import AddANewService from './components/AddANewService/AddANewService';
+import ExclusiveFeatures from './components/ExclusiveFeatures/ExclusiveFeatures';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
@@ -38,9 +39,12 @@ function App() {
             <PrivateRoute exact path="/serviceDetails/:id">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
-            <PrivateRoute exact path="/servicesMan">
+            <Route exact path="/servicesMan">
               <ServicesMan></ServicesMan>
-            </PrivateRoute>
+            </Route>
+            <Route exact path="/exclusive">
+              <ExclusiveFeatures></ExclusiveFeatures>
+            </Route>
             <Route exact path="/myOrders">
               <MyOrders></MyOrders>
             </Route>
