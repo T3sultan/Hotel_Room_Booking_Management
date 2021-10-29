@@ -1,0 +1,11 @@
+.service{
+    background-color: rgb(230, 207, 231);
+    border-radius: 10px;
+}
+.service img{
+    width: 100%;
+}
+.price{
+
+    font-weight: bold;
+}

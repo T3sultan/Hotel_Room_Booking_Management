@@ -12,7 +12,9 @@ import Login from './components/Login/Login';
 import MangeAllOrders from './components/MangeAllOrders/MangeAllOrders';
 import MyOrders from './components/MyOrders/MyOrders';
 import PageNotFound from './components/PageNotFound/PageNotFound';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Services from './components/Services/Services';
 import AuthProvider from './context/AuthProvider';
 
@@ -32,6 +34,9 @@ function App() {
             <Route exact path="/services">
               <Services></Services>
             </Route>
+            <PrivateRoute exact path="/serviceDetails/:id">
+              <ServiceDetails></ServiceDetails>
+            </PrivateRoute>
             <Route exact path="/myOrders">
               <MyOrders></MyOrders>
             </Route>

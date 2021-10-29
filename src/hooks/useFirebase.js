@@ -21,7 +21,8 @@ const useFireBase = () => {
 
     const signInUsingGoogle = () => {
 
-        return signInWithPopup(auth, googleProvider);
+         return  signInWithPopup(auth, googleProvider)
+      
 
     }
 
