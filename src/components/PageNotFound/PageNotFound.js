@@ -1,9 +1,13 @@
 import React from 'react';
 import './PageNotFound.css'
+import { Link } from 'react-router-dom';
+import notFound from '../../images/error/2446910-ai.png'
+
 const PageNotFound = () => {
     return (
         <div>
-            <h3>not found</h3>
+            <img style={{ width: "100%" }} src={notFound} alt="" />
+            <Link to="/"><button>Go Back</button></Link>
         </div>
     );
 };

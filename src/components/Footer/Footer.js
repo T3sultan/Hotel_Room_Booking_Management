@@ -12,7 +12,7 @@ const Footer = () => {
             <div>
                 <h4 className='title'><i className="far fa-address-card"></i> About Me</h4>
                 <p className='title'>Tipu Sultan</p>
-                <p className='title'>BSc in CSE</p>
+                <p className='title'>Bsc in CSE</p>
                 <p className='title'>Front End & React Native</p>
                 <a className='title' href="https://github.com/T3sultan"><p>Website: T3sultan.com</p></a>
             </div>
