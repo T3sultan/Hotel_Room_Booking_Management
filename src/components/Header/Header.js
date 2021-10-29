@@ -15,7 +15,7 @@ const Header = () => {
         <>
             <Navbar className="mineContainer" collapseOnSelect expand="lg" sticky="top" variant="dark">
                 <Container className="container">
-                    <Navbar.Brand href="#home" className="hospitalTittle">Specialized  Hospital</Navbar.Brand>
+                    <Navbar.Brand href="#home" className="hospitalTittle">Hotel Management</Navbar.Brand>
                     <Nav className="">
                         <Navbar.Toggle />
                         <Navbar.Collapse className="justify-content-end">

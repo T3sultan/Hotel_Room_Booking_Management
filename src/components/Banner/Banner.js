@@ -3,10 +3,13 @@ import { Carousel } from 'react-bootstrap';
 import './Banner.css'
 
 
-import banner1 from '../../images/arseny-togulev-DE6rYp1nAho-unsplash.jpg';
-import banner2 from '../../images/national-cancer-institute-701-FJcjLAQ-unsplash (1).jpg';
-import banner3 from '../../images/walter-otto-PT70CT6mATQ-unsplash.jpg';
-import banner4 from '../../images/olga-guryanova-tMFeatBSS4s-unsplash.jpg';
+import banner1 from '../../images/banner/files_299003436_HSF_0842.jpg';
+import banner2 from '../../images/banner/files_240457004_IMG_90275.jpg';
+import banner3 from '../../images/banner/files_246891891_IMG_6745.jpg';
+import banner4 from '../../images/banner/files_296836796_49251.jpg';
+import banner5 from '../../images/banner/files_38177641_DSC_9134.jpg';
+import banner6 from '../../images/banner/files_8833603_DSC_1681.jpg';
+
 
 
 
@@ -21,8 +24,7 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>Doctor Surgery Surgeon</h3>
-                        <p>There are also surgeons in podiatry, dentistry, orthodontics, and veterinary medicine   </p>
+                        <h3 className="first">Royal Family Suite</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -33,8 +35,7 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>National Cancer Institute</h3>
-                        <p>The National Cancer Institute (NCI) is the federal government's principal agency for cancer research and training.</p>
+                        <h3>Executive Suite</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -45,8 +46,7 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Vaccine Test And Food Safety</h3>
-                        <p>FDA has been doing what we can to support a safe and ample food supply</p>
+                        <h3>Superior King Garden View</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -57,8 +57,29 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>COVID-19, Health & Wellness</h3>
-                        <p> The FDA and Federal Trade Commission issued a warning letter to a seller of fraudulent COVID-19 products, as part of the agency’s effort to protect consumers.</p>
+                        <h3>Studio with Sea View</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={banner5}
+                        alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>Executive Suite with Hill View</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={banner6}
+                        alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>Royal Paradise Suite</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
