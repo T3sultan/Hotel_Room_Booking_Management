@@ -16,6 +16,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Services from './components/Services/Services';
+import ServicesMan from './components/ServicesMan/ServicesMan';
 import AuthProvider from './context/AuthProvider';
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <PrivateRoute exact path="/serviceDetails/:id">
               <ServiceDetails></ServiceDetails>
+            </PrivateRoute>
+            <PrivateRoute exact path="/servicesMan">
+              <ServicesMan></ServicesMan>
             </PrivateRoute>
             <Route exact path="/myOrders">
               <MyOrders></MyOrders>
