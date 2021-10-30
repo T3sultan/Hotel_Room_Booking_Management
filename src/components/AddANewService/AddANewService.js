@@ -11,7 +11,7 @@ const AddANewService = () => {
 
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/addNewService', data)
+        axios.post('http://localhost:5000/services', data)
             .then(res => {
                 console.log(res);
                 if (res.data.insertedId) {
@@ -22,17 +22,6 @@ const AddANewService = () => {
 
     }
 
-    // const onSubmit = (data) => {
-    //     data.email = user?.email;
-    //     fetch("http://localhost:5000/addNewService", {
-    //       method: "POST",
-    //       headers: { "content-type": "application/json" },
-    //       body: JSON.stringify(data),
-    //     })
-    //       .then((res) => res.json())
-    //       .then((result) => console.log(result));
-    //     console.log(data);
-    //   };
 
 
 
