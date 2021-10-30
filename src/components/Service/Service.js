@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Service.css'
 const Service = ({service}) => {
-    const { id, name, description, imgUrl,price } = service;
+    const { id, name, description,image ,price } = service;
 
     return (
         <div className="service pb-3">
-            <img src={imgUrl} alt="" />
+            <img src={image} alt="" />
             <h2>{name}</h2>
             <p className="p-1">{description.slice(0,100)}</p>
             <p><small className="price">{price}</small></p>
