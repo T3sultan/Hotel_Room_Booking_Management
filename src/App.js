@@ -13,6 +13,7 @@ import Login from './components/Login/Login';
 import MangeAllOrders from './components/MangeAllOrders/MangeAllOrders';
 import MyOrders from './components/MyOrders/MyOrders';
 import PageNotFound from './components/PageNotFound/PageNotFound';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
@@ -59,6 +60,9 @@ function App() {
             </Route>
             <Route exact path="/register">
               <Register></Register>
+            </Route>
+            <Route exact path="/placeorder">
+             <PlaceOrder></PlaceOrder>
             </Route>
             <Route exact path="*">
               <PageNotFound></PageNotFound>

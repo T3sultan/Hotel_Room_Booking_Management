@@ -8,3 +8,7 @@
     color: white;
     font-weight: bold;
 }
+.bgColor{
+    background-color: rgb(144, 142, 146);
+    border-radius: 10px;
+}

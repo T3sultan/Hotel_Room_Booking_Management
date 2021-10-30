@@ -3,8 +3,10 @@ import { Card, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import './ServiceDetails.css'
 import { useForm } from "react-hook-form";
+import { useHistory } from 'react-router';
 
 const ServiceDetails = () => {
+    const history = useHistory();
     const { serviceId } = useParams();
     const [service, setService] = useState({})
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -18,6 +20,9 @@ const ServiceDetails = () => {
             .then(data => setService(data))
 
     }, []);
+    const handlePlaceOrder = () => {
+        history.push('/placeorder')
+    }
     return (
         <div>
             <h2 className="orderPlace">Order Place</h2>
@@ -52,6 +57,22 @@ const ServiceDetails = () => {
                                     value={service?.email}
                                 />
                                 <br />
+                                <br />
+                                <input
+                                    {...register("address")}
+                                    placeholder="Address"
+                                    className="p-2 m-2 w-100"
+                                    value={service?.address}
+                                />
+                                <br />
+                                <br />
+                                <input
+                                    {...register("city")}
+                                    placeholder="city"
+                                    className="p-2 m-2 w-100"
+                                    value={service?.city}
+                                />
+                                <br />
                                 <input
                                     {...register("price")}
                                     placeholder="price"
@@ -71,7 +92,7 @@ const ServiceDetails = () => {
                                
                                 {errors.exampleRequired && <span>This field is required</span>}
 
-                                <input type="submit" value="Submit" className="btn btn-info w-100 btnStyle1" />
+                                <input onClick={handlePlaceOrder} type="submit" value="Place Order" className="btn btn-info w-100 btnStyle1" />
                             </form>
                         </Card.Body>
                     </Card>

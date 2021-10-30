@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 
 const AddANewService = () => {
     const { user } = useFireBase()
-    const {reset, register,handleSubmit,formState: { errors },} = useForm();
+    const { reset, register, handleSubmit, formState: { errors }, } = useForm();
 
     const onSubmit = data => {
         console.log(data);
@@ -28,14 +28,14 @@ const AddANewService = () => {
     return (
         <div>
             <h1 className="mt-5 text-center titleSty1">Please Add New Service</h1>
-            <div className="login-box w-25 m-auto mt-5">
+            <div className="login-box w-50 m-auto mt-2 bgColor">
                 <div className="event-box border border d-flex justify-content-center align-items-center">
                     <div className="login-form">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input
                                 {...register("title")}
                                 placeholder="Title"
-                                className="p-2 m-2 w-100"
+                                className="p-2 m-2 w-100 "
                             />
                             <br />
                             <input
@@ -51,6 +51,21 @@ const AddANewService = () => {
                             />
                             <br />
                             <input
+                                {...register("address")}
+                                placeholder="Address"
+                                className="p-2 m-2 w-100"
+
+                            />
+                            <br />
+                         
+                            <input
+                                {...register("city")}
+                                placeholder="city"
+                                className="p-2 m-2 w-100"
+
+                            />
+                            <br />
+                            <input
                                 {...register("price")}
                                 placeholder="price"
                                 className="p-2 m-2 w-100"
@@ -59,7 +74,7 @@ const AddANewService = () => {
                             <br />
                             <input
                                 {...register("date")}
-                                 placeholder="Name"
+                                placeholder="Name"
                                 type="date"
                                 className="p-2 m-2 w-100"
                             />
