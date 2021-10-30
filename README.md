@@ -1,4 +1,4 @@
-#PROJECT NAME : Hotel Management
+#PROJECT NAME : Hotel Room Booking
 
 Content : <br/>
   
@@ -20,6 +20,6 @@ Back-End : <br/>
            * Cors<br/>  
            * Nodemon <br/>  
 
-#Hotel Management live site  :=><br/>
+#Hotel Room Booking live site  :=><br/>
 
 

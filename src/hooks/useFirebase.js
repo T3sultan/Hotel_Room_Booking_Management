@@ -15,7 +15,7 @@ const auth = getAuth();
 const useFireBase = () => {
     const [user, setUser] = useState({});
  
-   // const [isLoading, setLoading] = useState(true);
+   const [isLoading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
 
 
@@ -34,14 +34,14 @@ const useFireBase = () => {
             else {
                 setUser({})
             }
-           // setLoading(false)
+            setLoading(false)
         });
         return () => unsubscribed;
 
     }, []);
     const logout = () => {
 
-       // setLoading(true)
+        setLoading(true)
         signOut(auth)
             .then(() => {
                 setUser({})
@@ -52,7 +52,7 @@ const useFireBase = () => {
         user,
         signInUsingGoogle,
         logout,
-      //  isLoading,
+        isLoading,
 
     }
 };
