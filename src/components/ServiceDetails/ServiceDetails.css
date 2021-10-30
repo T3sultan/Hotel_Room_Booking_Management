@@ -7,3 +7,7 @@
 .detailsStyle{
     background-color: rgb(238, 238, 229);
 }
+.orderPlace{
+    color: black;
+    font-weight: bold;
+}
