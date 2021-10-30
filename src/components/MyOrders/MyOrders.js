@@ -1,9 +1,9 @@
 import React from 'react';
-import './MyOrders.css'
+
 const MyOrders = () => {
     return (
         <div>
-            <h2>My orders</h2>
+            <h2>order place</h2>
         </div>
     );
 };

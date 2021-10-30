@@ -13,21 +13,21 @@ const MangeAllOrders = () => {
             .then(data => setServices(data));
 
     }, []);
-    // const handleDelete = id => {
-    //     //const url = ;
-    //     fetch(`http://localhost:5000/services/${id}`, {
-    //         method: 'DELETE'
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             if (data.deletedCount > 0) {
-    //                 alert('successfully deleted')
-    //                 const remaining = services.filter(service => service._id !== id)
-    //                 setServices(remaining);
-    //             }
-    //         })
-    // }
+    const handleDelete = id => {
+        //const url = ;
+        fetch(`http://localhost:5000/services/${id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.deletedCount > 0) {
+                    alert('successfully deleted')
+                    const remaining = services.filter(service => service._id !== id)
+                    setServices(remaining);
+                }
+            })
+    }
 
     return (
         // <div>
@@ -44,15 +44,17 @@ const MangeAllOrders = () => {
         // </div>
 
         <div className="container">
-            <h1>Events {services?.length}</h1>
+            <h1>Mange All Orders {services?.length}</h1>
             <div>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Event Title</th>
-                            <th>Event description</th>
-                            <th>Image Link</th>
+                            <th>User Name</th>
+                            <th>Title</th>
+                            <th>Email</th>
+                            <th>Description</th>
+                            <th>Price</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -60,11 +62,14 @@ const MangeAllOrders = () => {
                         <tbody>
                             <tr>
                                 <td>{index}</td>
-                                <td>{pd.title}</td>
-                                <td>{pd.description}</td>
-                                <td>{pd.image}</td>
+                                <td>{pd?.name}</td>
+                                <td>{pd?.title}</td>
+                                <td>{pd?.email}</td>
+                                <td>{pd?.description.slice(0,20)}</td>
+                                <td>{pd?.price}TK</td>
+
                                 <button
-                                    // onClick={() => handleDelete(pd._id)}
+                                     onClick={() => handleDelete(pd._id)}
                                     className="btn bg-danger p-2"
                                 >
                                     Delete

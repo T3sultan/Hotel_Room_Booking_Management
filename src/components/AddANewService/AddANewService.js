@@ -33,25 +33,37 @@ const AddANewService = () => {
                     <div className="login-form">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input
+                                {...register("title")}
+                                placeholder="Title"
+                                className="p-2 m-2 w-100"
+                            />
+                            <br />
+                            <input
                                 {...register("name")}
                                 placeholder="Name"
                                 className="p-2 m-2 w-100"
                             />
                             <br />
                             <input
-                                {...register("number")}
+                                {...register("email")}
+                                placeholder="Email"
+                                className="p-2 m-2 w-100"
+                            />
+                            <br />
+                            <input
+                                {...register("price")}
                                 placeholder="price"
                                 className="p-2 m-2 w-100"
                                 type="number"
                             />
                             <br />
-                            {/* <input
+                            <input
                                 {...register("date")}
-                                // placeholder="Name"
+                                 placeholder="Name"
                                 type="date"
                                 className="p-2 m-2 w-100"
                             />
-                            <br /> */}
+                            <br />
                             <input
                                 {...register("description")}
                                 placeholder="Description"
