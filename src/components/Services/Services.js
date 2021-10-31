@@ -9,7 +9,7 @@ import './Services.css'
 
 const Services = () => {
     const [services, setServices] = useState([]);
-    const {loading} = useAuth()
+    //const { loading } = useAuth()
 
     useEffect(() => {
 
@@ -19,20 +19,24 @@ const Services = () => {
     }, [])
     return (
         <div id="services">
-        <h2 className="my-5 textStyle">Hotel Room Services</h2>
-        {/* <Spinner itemType={loading} animation="border" variant="dark" /> */}
-        <div className="container">
-            {
+            <h2 className="my-5 textStyle">Hotel Room Services</h2>
+            {services.length === 0 ?
+                <Spinner animation="border" variant="dark" />
+                :
 
-                services.map(service => <Service
-                    key={service.id}
-                    service={service}
-                >
+                <div className="container">
+                    {
 
-                </Service>)
+                        services.map(service => <Service
+                            key={service.id}
+                            service={service}
+                        >
+
+                        </Service>)
+                    }
+                </div>
             }
         </div>
-    </div>
     );
 };
 
