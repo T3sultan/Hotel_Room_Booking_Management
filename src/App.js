@@ -47,15 +47,15 @@ function App() {
             <Route exact path="/exclusive">
               <ExclusiveFeatures></ExclusiveFeatures>
             </Route>
-            <Route exact path="/myOrders">
+            <PrivateRoute exact path="/myOrders">
               <MyOrders></MyOrders>
-            </Route>
-            <Route exact path="/mangeAllOrders">
+            </PrivateRoute>
+            <PrivateRoute exact path="/mangeAllOrders">
               <MangeAllOrders></MangeAllOrders>
-            </Route>
-            <Route exact path="/addNewService">
+            </PrivateRoute>
+            <PrivateRoute exact path="/addNewService">
               <AddANewService></AddANewService>
-            </Route>
+            </PrivateRoute>
             <Route exact path="/login">
               <Login></Login>
             </Route>
