@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import ServiceMan from '../ServiceMan/ServiceMan';
 
 import man1 from '../../images/serviceMan/133.jpg'
-import man2 from '../../images/serviceMan/44.jpg'
-import man3 from '../../images/serviceMan/55.jpg'
+import man2 from '../../images/serviceMan/1111.jpg'
+import man3 from '../../images/serviceMan/2222.jpg'
 import man4 from '../../images/serviceMan/66.jpg'
-import man5 from '../../images/serviceMan/77.jpg'
+import man5 from '../../images/serviceMan/4444.jpg'
 import man6 from '../../images/serviceMan/99.jpg'
 
 
