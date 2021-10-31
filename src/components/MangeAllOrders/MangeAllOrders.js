@@ -30,18 +30,7 @@ const MangeAllOrders = () => {
     }
 
     return (
-        // <div>
-        //     <h2>Mange All Orders {services.length}</h2>
-        //     {
-        //         services.map(service => <div
-        //             key={service._id}
-        //         >
-
-        //             <h3>{service.name}</h3>
-        //             <button onClick={() => handleDelete(service._id)}>Delete</button>
-        //         </div>)
-        //     }
-        // </div>
+    
 
         <div className="container">
             <h1>Mange All Orders {services?.length}</h1>
