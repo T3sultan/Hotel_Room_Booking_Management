@@ -11,6 +11,7 @@ const AddANewService = () => {
 
     const onSubmit = data => {
         console.log(data);
+        data.email = user?.email;
         axios.post('http://localhost:5000/services', data)
             .then(res => {
                 console.log(res);

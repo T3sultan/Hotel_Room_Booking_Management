@@ -6,7 +6,7 @@ import {
     GoogleAuthProvider,
     onAuthStateChanged,
     signOut,
-  
+
 } from "firebase/auth";
 initializeAuthenticationFirebase();
 
@@ -14,15 +14,22 @@ const auth = getAuth();
 
 const useFireBase = () => {
     const [user, setUser] = useState({});
- 
-   const [isLoading, setLoading] = useState(true);
+
+    const [isLoading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
 
 
     const signInUsingGoogle = () => {
+        setLoading(true);
+        return signInWithPopup(auth, googleProvider)
 
-         return  signInWithPopup(auth, googleProvider)
-      
+
+            // const googleProvider = new GoogleAuthProvider()
+            // signInWithPopup(auth, googleProvider)
+            .then(result => {
+                setUser(result.user)
+            })
+            .finally(() => setLoading(false))
 
     }
 
@@ -46,6 +53,7 @@ const useFireBase = () => {
             .then(() => {
                 setUser({})
             })
+            .finally(() => setLoading(false))
 
     }
     return {
