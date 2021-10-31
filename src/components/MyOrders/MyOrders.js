@@ -10,14 +10,14 @@ const MyOrders = () => {
     const [orders,setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${user?.email}`)
+        fetch(`https://creepy-web-29346.herokuapp.com/myOrders/${user?.email}`)
           .then((res) => res.json())
           .then((data) => setOrders(data));
       }, [user.email]);
 
       const handleDelete = id => {
         //const url = ;
-        fetch(`http://localhost:5000/services/${id}`, {
+        fetch(`https://creepy-web-29346.herokuapp.com/services/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

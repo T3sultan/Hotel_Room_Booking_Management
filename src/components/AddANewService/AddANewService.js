@@ -12,7 +12,7 @@ const AddANewService = () => {
     const onSubmit = data => {
         console.log(data);
         data.email = user?.email;
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://creepy-web-29346.herokuapp.com/services', data)
             .then(res => {
                 console.log(res);
                 if (res.data.insertedId) {

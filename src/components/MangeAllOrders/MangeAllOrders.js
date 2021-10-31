@@ -8,14 +8,14 @@ const MangeAllOrders = () => {
 
     useEffect(() => {
         //const url = ``;
-        fetch('http://localhost:5000/services')
+        fetch('https://creepy-web-29346.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data));
 
     }, []);
     const handleDelete = id => {
         //const url = ;
-        fetch(`http://localhost:5000/services/${id}`, {
+        fetch(`https://creepy-web-29346.herokuapp.com/services/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

@@ -11,7 +11,7 @@ const Update = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `http://localhost:5000/services/${id}`;
+        const url = `https://creepy-web-29346.herokuapp.com/services/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setUpdate(data));
@@ -158,7 +158,7 @@ const Update = () => {
 
 
     const handleUpdateOrder = (e) => {
-        const url = `http://localhost:5000/services/${id}`;
+        const url = `https://creepy-web-29346.herokuapp.com/services/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
