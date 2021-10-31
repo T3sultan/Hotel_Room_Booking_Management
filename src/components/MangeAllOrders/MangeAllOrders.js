@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const MangeAllOrders = () => {
     const { serviceId } = useParams()
@@ -56,6 +56,10 @@ const MangeAllOrders = () => {
                             <th>Description</th>
                             <th>Price</th>
                             <th>Action</th>
+
+
+
+
                         </tr>
                     </thead>
                     {services?.map((pd, index) => (
@@ -65,15 +69,16 @@ const MangeAllOrders = () => {
                                 <td>{pd?.name}</td>
                                 <td>{pd?.title}</td>
                                 <td>{pd?.email}</td>
-                                <td>{pd?.description.slice(0,20)}</td>
+                                <td>{pd?.description.slice(0, 20)}</td>
                                 <td>{pd?.price}TK</td>
 
                                 <button
-                                     onClick={() => handleDelete(pd._id)}
+                                    onClick={() => handleDelete(pd._id)}
                                     className="btn bg-danger p-2"
                                 >
                                     Delete
                                 </button>
+                                <Link to={`/services/update/${pd._id}`}> <button className="btn bg-warning">update</button> </Link>
                             </tr>
                         </tbody>
                     ))}

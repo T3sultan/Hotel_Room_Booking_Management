@@ -19,6 +19,7 @@ import Register from './components/Register/Register';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Services from './components/Services/Services';
 import ServicesMan from './components/ServicesMan/ServicesMan';
+import Update from './components/Update/Update';
 import AuthProvider from './context/AuthProvider';
 
 function App() {
@@ -62,7 +63,10 @@ function App() {
               <Register></Register>
             </Route>
             <Route exact path="/placeorder">
-             <PlaceOrder></PlaceOrder>
+              <PlaceOrder></PlaceOrder>
+            </Route>
+            <Route exact path="/services/update/:id">
+              <Update></Update>
             </Route>
             <Route exact path="*">
               <PageNotFound></PageNotFound>

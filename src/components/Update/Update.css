@@ -1,0 +1,14 @@
+.titleSty1{
+    color: rgb(36, 3, 44);
+    font-size: 22px;
+    font-weight: bold;
+}
+.btnStyle1{
+    background-color: rgb(228, 41, 187);
+    color: white;
+    font-weight: bold;
+}
+.bgColor{
+    background-color: rgb(144, 142, 146);
+    border-radius: 10px;
+}

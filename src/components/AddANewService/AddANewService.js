@@ -94,15 +94,7 @@ const AddANewService = () => {
                                 className="p-2 m-2 w-100"
                             />
                             <br />
-                            {/* <select {...register("EventColor")} className="p-2 m-2 w-100">
-                                <option value="red">red</option>
-                                <option value="green">green</option>
-                                <option value="blue">blue</option>
-                                <option value="orange">orange</option>
-                                <option value="black">black</option>
-                            </select>
-                            <br /> */}
-
+                           
                             {errors.exampleRequired && <span>This field is required</span>}
 
                             <input type="submit" value="Add" className="btn btn-info w-100 btnStyle1" />
